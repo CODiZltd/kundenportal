@@ -225,11 +225,11 @@
         <menuitem id="mandantenstatus" name="Mandantenstatus" parent="backend_menu"
                   action="mandantenstatus_list_action" sequence="4"/>
         <menuitem id="unternehmensformen" name="Unternehmensformen" parent="backend_menu"
-                  action="unternehmensformen_list_action"/>
+                  action="unternehmensformen_list_action" sequence="5"/>
         <menuitem id="mandanten" name="Mandanten" parent="backend_menu"
-                  action="mandanten_list_action"/>
+                  action="mandanten_list_action" sequence="7"/>
         <menuitem id="kontakte" name="Kontakte" parent="backend_menu"
-                  action="kontakte_list_action"/>
+                  action="kontakte_list_action" sequence="6"/>
         
         <menuitem id="paket" name="Paket" parent="backend_menu"
                   action="paket_list_action"/>
