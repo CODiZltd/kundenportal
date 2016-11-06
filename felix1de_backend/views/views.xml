@@ -65,7 +65,7 @@
                 </p>
             </field>
         </record>
-        <!--record model="ir.actions.act_window" id="kontakte_list_action">
+        <record model="ir.actions.act_window" id="kontakte_list_action">
             <field name="name">Fields</field>
             <field name="res_model">backend.kontakte</field>
             <field name="view_type">form</field>
@@ -74,7 +74,7 @@
                 <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
                 </p>
             </field>
-        </record-->
+        </record>
         <record model="ir.actions.act_window" id="auftraege_list_action">
             <field name="name">Fields</field>
             <field name="res_model">backend.auftraege</field>
@@ -213,9 +213,9 @@
              before using action= attribute -->
         <menuitem id="backend_menu" name="Tabellen"
                   parent="main_backend_menu"/>
-        <!-- the following menuitem should appear *after*
+        <the following menuitem should appear *after*
              its parent openacademy_menu and *after* its
-             action course_list_action -->
+             action course_list_action>
         <menuitem id="berater" name="Berater" parent="backend_menu"
                   action="berater_list_action" sequence="2"/>
         <menuitem id="branchen" name="Branchen" parent="backend_menu"
@@ -228,8 +228,8 @@
                   action="unternehmensformen_list_action" sequence="5"/>
         <menuitem id="mandanten" name="Mandanten" parent="backend_menu"
                   action="mandanten_list_action" sequence="7"/>
-        <!--menuitem id="kontakte" name="Kontakte" parent="backend_menu"
-                  action="kontakte_list_action" sequence="6"/-->
+        <menuitem id="kontakte" name="Kontakte" parent="backend_menu"
+                  action="kontakte_list_action" sequence="6"/>
         
         <menuitem id="paket" name="Paket" parent="backend_menu"
                   action="paket_list_action"/>
