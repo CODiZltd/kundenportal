@@ -2,10 +2,10 @@
 
 from openerp import models, fields, api,_
 
-class backend_mandanten(models.Model):
-    _name='backend.mandanten'
+class backend_mndanten(models.Model):
+    _name='backend.mndanten'
     
-    name=fields.Char(String="Mandant", help="Name des Mamdanten", required=True)
+    name=fields.Char(String="Mandant", help="Name des Mandanten", required=True)
     bemerkung=fields.Text()
     mandantennummer=fields.Char('Mandantennummer',required=True, index=True) 
     emailpisa=fields.Char(String="eMailPISA")
