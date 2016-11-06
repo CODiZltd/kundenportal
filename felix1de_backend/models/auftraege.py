@@ -5,9 +5,9 @@ from openerp import models, fields, api,_
 class backend_auftraege(models.Model):
     _name='backend.auftraege'
     
-    name=fields.Many2one("backend.mandanten", string="Mandant",Index=True)
+    name=fields.Many2one("backend.mandanten", string="Mandant",index=True)
     buchungsdatum=fields.Date("Buchungsdatum")
-    Paket=fields.Many2one("backend.pakete", string="Pakete", Index=True)
+    Paket=fields.Many2one("backend.pakete", string="Pakete", index=True)
     Start=fields.Date("Start")
     Ende=fields.Date("Ende")
     Umsatz=fields.Monetary("Umsatz")
