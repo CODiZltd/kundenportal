@@ -6,7 +6,7 @@ class backend_preiseschluessel(models.Model):
     _name='backend.preiseschluessel'
     
     beschreibung=fields.Text('Beschreibung')
-    schluessel=fields.Char('Schlüssel')
+    name=fields.Char('Schlüssel')
     abrechnungszeitraum=fields.Many2one('backend.abrechnungszeitraeume', string='Abrechnungszeitraum')#
     istBruttopreis=fields.Boolean('IstBruttopreis', default=False)
     MehrfachBuchbar=fields.Boolean('MehrfachBuchbar', help="gilt z.B. für Lohnabrechnung", default=False)
