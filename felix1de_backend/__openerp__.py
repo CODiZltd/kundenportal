@@ -11,7 +11,7 @@
         hiermit fortlaufend aktuallisiert werden.
    """,
 
-    'author': "Hector (HiYa Coding LTD)",
+    'author': "HiYa Coding LTD",
     'website': "http://www.hiyacoding.co.uk",
     'icon': "/felix1de_backend/static/description/backend.png",
     # Categories can be used to filter modules in modules listing
