@@ -16,7 +16,7 @@ import mandanten
 import lohnmandanten
 import lohnpreiseartikel
 import kanzleien 
-#import kontakte
+import kontakte
 import berater 
 import unternehmensformen
 import branchen
