@@ -12,7 +12,7 @@ import paketestatus
 import preiseschluessel
 import abrechnungszeitraeume
 import ops
-#import mandanten 
+import mandanten 
 import lohnmandanten
 import lohnpreiseartikel
 import kanzleien 
