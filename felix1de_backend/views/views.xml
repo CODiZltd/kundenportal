@@ -217,9 +217,9 @@
              its parent openacademy_menu and *after* its
              action course_list_action -->
         <menuitem id="berater" name="Berater" parent="backend_menu"
-                  action="berater_list_action"/>
+                  action="berater_list_action" sequence="2"/>
         <menuitem id="branchen" name="Branchen" parent="backend_menu"
-                  action="branchen_list_action"/>
+                  action="branchen_list_action" sequence="1"/>
         <menuitem id="kanzleien" name="Kanzleien" parent="backend_menu"
                   action="kanzleien_list_action"/>
         <menuitem id="mandantenstatus" name="Mandantenstatus" parent="backend_menu"
