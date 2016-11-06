@@ -1,0 +1,329 @@
+<openerp>
+  <data>
+   <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+        <record model="ir.actions.act_window" id="berater_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.berater</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="branchen_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.branchen</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="kanzleien_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.kanzleien</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="mandanten_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.mandanten</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="mandantenstatus_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.mandantenstatus</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="unternehmensformen_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.unternehmensformen</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="kontakte_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.kontakte</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="auftraege_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.auftraege</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="pakete_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.pakete</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="paket_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.paket</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="paketkategorie_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.paketkategorie</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+         <record model="ir.actions.act_window" id="felix1gruppen_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.felix1gruppen</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="checklistenvorlagen_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.checklistenvorlagen</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="checklistentypen_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.checklistentypen</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="paketestatus_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.paketestatus</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="preiseschluessel_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.preiseschluessel</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="abrechnungszeitraeume_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.abrechnungszeitraeume</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="ops_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.ops</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="lohnmandanten_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.lohnmandanten</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="lohnpreiseartikel_list_action">
+            <field name="name">Fields</field>
+            <field name="res_model">backend.lohnpreiseartikel</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+
+
+        <!-- top level menu: no parent -->
+        <menuitem id="main_backend_menu" name="Access Backend"/>
+        <!-- A first level in the left side menu is needed
+             before using action= attribute -->
+        <menuitem id="backend_menu" name="Tabellen"
+                  parent="main_backend_menu"/>
+        <!-- the following menuitem should appear *after*
+             its parent openacademy_menu and *after* its
+             action course_list_action -->
+        <menuitem id="berater" name="Berater" parent="backend_menu"
+                  action="berater_list_action"/>
+        <menuitem id="branchen" name="Branchen" parent="backend_menu"
+                  action="branchen_list_action"/>
+        <menuitem id="kanzleien" name="Kanzleien" parent="backend_menu"
+                  action="kanzleien_list_action"/>
+        <menuitem id="mandantenstatus" name="Mandantenstatus" parent="backend_menu"
+                  action="mandantenstatus_list_action"/>
+        <menuitem id="unternehmensformen" name="Unternehmensformen" parent="backend_menu"
+                  action="unternehmensformen_list_action"/>
+        <menuitem id="mandanten" name="Mandanten" parent="backend_menu"
+                  action="mandanten_list_action"/>
+        <menuitem id="kontakte" name="Kontakte" parent="backend_menu"
+                  action="kontakte_list_action"/>
+        
+        <menuitem id="paket" name="Paket" parent="backend_menu"
+                  action="paket_list_action"/>
+        <menuitem id="paketkategorie" name="Paketkategorie" parent="backend_menu"
+                  action="paketkategorie_list_action"/>  
+        <menuitem id="felix1gruppen" name="Felix1gruppen" parent="backend_menu"
+                  action="felix1gruppen_list_action"/>  
+        <menuitem id="checklistentypen" name="Checklistentypen" parent="backend_menu"
+                  action="checklistentypen_list_action"/>                            
+        <menuitem id="checklistenvorlagen" name="checklistenvorlagen" parent="backend_menu"
+                  action="checklistenvorlagen_list_action"/>  
+        <menuitem id="paketestatus" name="Paketestatus" parent="backend_menu"
+                  action="paketestatus_list_action"/>
+        <menuitem id="abrechnungszeitraeume" name="Abrechnungszeitraeume" parent="backend_menu"
+                  action="abrechnungszeitraeume_list_action"/>
+        
+        <menuitem id="preiseschluessel" name="Preiseschluessel" parent="backend_menu"
+                  action="preiseschluessel_list_action"/>
+        
+        
+        <menuitem id="pakete" name="Pakete" parent="backend_menu"
+                  action="pakete_list_action"/>
+        <menuitem id="auftraege" name="Aufträge" parent="backend_menu"
+                  action="auftraege_list_action"/>
+        <menuitem id="ops" name="Ops" parent="backend_menu"
+                  action="ops_list_action"/>
+         <menuitem id="lohnmandanten" name="Lohnmandanten" parent="backend_menu"
+                  action="lohnmandanten_list_action"/>
+        <menuitem id="lohnpreiseartikel" name="Lohnpreiseartikel" parent="backend_menu"
+                  action="lohnpreiseartikel_list_action"/>
+        <!-- Full id location:
+             action="openacademy.course_list_action"
+             It is not required when it is the same module -->  
+  
+  
+  
+  
+  
+  
+  
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="felix1de_backend.list">
+      <field name="name">felix1de_backend list</field>
+      <field name="model">felix1de_backend.felix1de_backend</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="felix1de_backend.action_window">
+      <field name="name">felix1de_backend window</field>
+      <field name="res_model">felix1de_backend.felix1de_backend</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="felix1de_backend.action_server">
+      <field name="name">felix1de_backend server</field>
+      <field name="model_id" ref="model_felix1de_backend_felix1de_backend"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="felix1de_backend" id="felix1de_backend.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="felix1de_backend.menu_1" parent="felix1de_backend.menu_root"/>
+    <menuitem name="Menu 2" id="felix1de_backend.menu_2" parent="felix1de_backend.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="felix1de_backend.menu_1_list" parent="felix1de_backend.menu_1"
+              action="felix1de_backend.action_window"/>
+    <menuitem name="Server to list" id="felix1de_backend" parent="felix1de_backend.menu_2"
+              action="felix1de_backend.action_server"/>
+    -->
+  </data>
+</openerp>
