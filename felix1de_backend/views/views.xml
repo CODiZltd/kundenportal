@@ -37,7 +37,7 @@
         </record>
         <record model="ir.actions.act_window" id="mandanten_list_action">
             <field name="name">Fields</field>
-            <field name="res_model">backend.mandanten</field>
+            <field name="res_model">backend.mndanten</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
