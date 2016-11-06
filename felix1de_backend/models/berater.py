@@ -9,7 +9,7 @@ class backend_berater(models.Model):
     bemerkung=fields.Text('Bemerkung')
     beraterid=fields.Char('Berater ID')
     etlbenutzername=fields.Char('ETL Benutzername')
-    vorname=fields.Char('Vorname', help="Vorname des Steuerberaters", required=True)
+    vorname=fields.Char('Vorname', help="Vorname des Steuerberaters", required=False)
     anrede=fields.Selection([('Frau', 'Herr')])
     Titel=fields.Char('Titel')
     kanzleileiter=fields.Boolean('Kanzleileiter', dafault=False)
