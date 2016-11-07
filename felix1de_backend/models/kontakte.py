@@ -6,10 +6,10 @@ class backend_kontakte(models.Model):
     _name='backend.kontakte'
     
     vorname=fields.Char("Vorname")
-    name=fields.Char("Nachname")
+    nachname=fields.Char("Nachname")
     anrede=fields.Char("Anrede")
     titel=fields.Char("Titel") #.(selection=[('Dr.', 'Dr.'),('Prof.','Prof.'),('Prof. Dr.','Prof. Dr.')])
-    vornamenachname=fields.Char('Vorname Nachname')
+    name=fields.Char('Vorname Nachname')
     nachnamevorname=fields.Char('Nachname Vorname')
     telefon1=fields.Char("Telefon1")
     telefon2=fields.Char("Telefon2")
