@@ -5,9 +5,9 @@ from openerp import models, fields, api,_
 class backend_mandanten(models.Model):
     _name='backend.mandanten'
     
-    mandant=fields.Char(String="Mandant", help="Name des Mandanten", required=True)
+    name=fields.Char(String="Mandant", help="Name des Mandanten", required=True)
     bemerkung=fields.Text()
-    name=fields.Char('Mandantennummer',required=True, index=True) 
+    mandantennummer=fields.Char('Mandantennummer',required=True, index=True) 
     emailpisa=fields.Char(String="eMailPISA")
     kanzlei=fields.Many2one('backend.kanzleien', ondelete='set null', String="Kanzlei", index=True)
     steuerberater=fields.Many2one('backend.berater', ondelete='set null', String="Steuerberater", index=True)

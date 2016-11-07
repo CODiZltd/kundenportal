@@ -215,51 +215,77 @@
                   parent="main_backend_menu"/>
         <the following menuitem should appear *after*
              its parent openacademy_menu and *after* its
+<<<<<<< HEAD
              action course_list_action>
         <menuitem id="berater" name="Berater" parent="backend_menu"
                   action="berater_list_action" sequence="2"/>
+=======
+             action course_list_action -->
+>>>>>>> c2701a5e6c9fcc65b5048f1ff6837d4f3b235655
         <menuitem id="branchen" name="Branchen" parent="backend_menu"
                   action="branchen_list_action" sequence="1"/>
+        <menuitem id="berater" name="Berater" parent="backend_menu"
+                  action="berater_list_action" sequence="2"/>
         <menuitem id="kanzleien" name="Kanzleien" parent="backend_menu"
                   action="kanzleien_list_action" sequence="3"/>
         <menuitem id="mandantenstatus" name="Mandantenstatus" parent="backend_menu"
                   action="mandantenstatus_list_action" sequence="4"/>
         <menuitem id="unternehmensformen" name="Unternehmensformen" parent="backend_menu"
                   action="unternehmensformen_list_action" sequence="5"/>
+<<<<<<< HEAD
         <menuitem id="mandanten" name="Mandanten" parent="backend_menu"
                   action="mandanten_list_action" sequence="7"/>
         <menuitem id="kontakte" name="Kontakte" parent="backend_menu"
                   action="kontakte_list_action" sequence="6"/>
         
+=======
+>>>>>>> c2701a5e6c9fcc65b5048f1ff6837d4f3b235655
         <menuitem id="paket" name="Paket" parent="backend_menu"
-                  action="paket_list_action"/>
+                  action="paket_list_action" sequence="6"/>
         <menuitem id="paketkategorie" name="Paketkategorie" parent="backend_menu"
-                  action="paketkategorie_list_action"/>  
-        <menuitem id="felix1gruppen" name="Felix1gruppen" parent="backend_menu"
-                  action="felix1gruppen_list_action"/>  
-        <menuitem id="checklistentypen" name="Checklistentypen" parent="backend_menu"
-                  action="checklistentypen_list_action"/>                            
-        <menuitem id="checklistenvorlagen" name="checklistenvorlagen" parent="backend_menu"
-                  action="checklistenvorlagen_list_action"/>  
+                  action="paketkategorie_list_action" sequence="7"/>
         <menuitem id="paketestatus" name="Paketestatus" parent="backend_menu"
-                  action="paketestatus_list_action"/>
+                  action="paketestatus_list_action" sequence="8"/>
+        <menuitem id="felix1gruppen" name="Felix1gruppen" parent="backend_menu"
+                  action="felix1gruppen_list_action" sequence="9"/>  
+        <menuitem id="checklistentypen" name="Checklistentypen" parent="backend_menu"
+                  action="checklistentypen_list_action" sequence="10"/>
+        <menuitem id="checklistenvorlagen" name="checklistenvorlagen" parent="backend_menu"
+                  action="checklistenvorlagen_list_action" sequence="11"/> 
         <menuitem id="abrechnungszeitraeume" name="Abrechnungszeitraeume" parent="backend_menu"
-                  action="abrechnungszeitraeume_list_action"/>
-        
+                  action="abrechnungszeitraeume_list_action" sequence="12"/>                           
         <menuitem id="preiseschluessel" name="Preiseschluessel" parent="backend_menu"
-                  action="preiseschluessel_list_action"/>
-        
-        
+                  action="preiseschluessel_list_action" sequence="13"/>
         <menuitem id="pakete" name="Pakete" parent="backend_menu"
-                  action="pakete_list_action"/>
-        <menuitem id="auftraege" name="Aufträge" parent="backend_menu"
-                  action="auftraege_list_action"/>
+                  action="pakete_list_action" sequence="14"/>
+         <menuitem id="lohnpreiseartikel" name="Lohnpreiseartikel" parent="backend_menu"
+                  action="lohnpreiseartikel_list_action" sequence="15"/>
+        <menuitem id="lohnmandanten" name="Lohnmandanten" parent="backend_menu"
+                  action="lohnmandanten_list_action" sequence="16"/>
         <menuitem id="ops" name="Ops" parent="backend_menu"
-                  action="ops_list_action"/>
-         <menuitem id="lohnmandanten" name="Lohnmandanten" parent="backend_menu"
-                  action="lohnmandanten_list_action"/>
-        <menuitem id="lohnpreiseartikel" name="Lohnpreiseartikel" parent="backend_menu"
-                  action="lohnpreiseartikel_list_action"/>
+                  action="ops_list_action" sequence="17"/>
+
+        
+        <menuitem id="mandanten" name="Mandanten" parent="backend_menu"
+                  action="mandanten_list_action" sequence="18"/>
+        <menuitem id="auftraege" name="Aufträge" parent="backend_menu"
+                  action="auftraege_list_action" sequence="19"/>
+        <menuitem id="kontakte" name="Kontakte" parent="backend_menu"
+                  action="kontakte_list_action" sequence="20"/>
+        
+                 
+         
+                  
+        
+        
+        
+        
+        
+        
+
+
+        
+       
         <!-- Full id location:
              action="openacademy.course_list_action"
              It is not required when it is the same module -->  
