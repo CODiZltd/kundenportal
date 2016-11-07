@@ -9,8 +9,8 @@ class backend_kontakte(models.Model):
     nachname=fields.Char("Nachname")
     anrede=fields.Char("Anrede")
     titel=fields.Char("Titel") #.(selection=[('Dr.', 'Dr.'),('Prof.','Prof.'),('Prof. Dr.','Prof. Dr.')])
-    name=fields.Char('Vorname Nachname')
-    nachnamevorname=fields.Char('Nachname Vorname')
+    name=fields.Char('Nachname, Vorname')
+    vornamenachname=fields.Char('Vorname, Nachname')
     telefon1=fields.Char("Telefon1")
     telefon2=fields.Char("Telefon2")
     telefon3=fields.Char("Telefon3")
@@ -49,14 +49,18 @@ class backend_kontakte(models.Model):
    # def _auto_adresse(self):
    #     self.addresse = str(self.strasse) + " " + str(self.hausnummer) + ", " + self.plz + " " + self.ort
    # 
-   # @api.onchange('name', 'vorname')
-   # def _auto_namevorname(self):
-   #     # set auto-changing field
-   #     self.nachnamevorname = str(self.name) + ", " + str(self.vorname)
-   # 
-   # @api.onchange('vorname', 'name')
-   # def _auto_vornamename(self):
-   #     self.vornamenachname = str(self.vorname) + ", " + str(self.name)
+    @api.depends('vorname', 'nachname')
+    def _auto_namevorname(self):
+        for record in self:
+            record.name = str(record.nachname) + ", " + str(record.vorname)
+   # @api.depends('vorname', 'nachname')
+    def _auto_vornamename(self):
+        for record in self:
+            record.name = str(record.vorname) + ", " + str(record.nachname)
+    @api.onchange('vorname', 'nachname','anrede','titel')
+    def _auto_vornamename(self):
+        self.vornamenachname = str(self.vorname) + ", " + str(self.nachname)
+        self.name = str (self.anrede)+ " " +str(self.titel)+" "+str(self.nachname) + ", " + str(self.vorname)
         # Can optionally return a warning and domains
         #return {
         #    'warning': {
