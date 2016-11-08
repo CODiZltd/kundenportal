@@ -1,19 +1,23 @@
 # -*- coding: utf-8 -*-
 
 from openerp import models, fields, api,_
+import apiais
  
 class backend_lohnpreiseartikel(models.Model):
     _name='backend.lohnpreiseartikel'
+    _inherit='backend.apiais.accessid'
     
-    Produktkategorie=fields.Integer("Produktkategorie")
-    PreiseSchluesselSchluessel=fields.Integer('PreiseSchluesselSchluessel')
-    ArtikelLohnNummer=fields.Char('ArtikelLohnNummer')
-    Preis=fields.Monetary('Preis')
+    accessid=fields.Char('ID', compute='_lookup_accessid')
+    
+    produktkategorie=fields.Integer("Produktkategorie")
+    preiseschluesselschluessel=fields.Integer('PreiseSchluesselSchluessel')
+    artikellohnnummer=fields.Char('ArtikelLohnNummer')
+    preis=fields.Monetary('Preis')
     name=fields.Char('ArtikelLohnName')
-    ETLNrPKC=fields.Integer('ETLNrPKC')
-    Erloeskonto=fields.Char('Erloeskonto')
-    Zahlungsweise=fields.Char('Zahlungsweise')
-    Beschreibung=fields.Char('Beschreibung')
+    etlnrpkc=fields.Integer('ETLNrPKC')
+    erloeskonto=fields.Char('Erloeskonto')
+    zahlungsweise=fields.Char('Zahlungsweise')
+    beschreibung=fields.Char('Beschreibung')
     currency_id=fields.Many2one('res.currency',string='Währung')
     
     

@@ -1,14 +1,19 @@
 # -*- coding: utf-8 -*-
 
 from openerp import models, fields, api,_
+import apiais
 
 class backend_kontakte(models.Model):
     _name='backend.kontakte'
+    _inherit='backend.apiais.autoname'
+    _inherit='backend.apiais.accessid'
+    
+    accessid=fields.Char('ID', compute='_lookup_accessid')
     
     vorname=fields.Char("Vorname")
     nachname=fields.Char("Nachname")
-    anrede=fields.Char("Anrede")
-    titel=fields.Char("Titel") #.(selection=[('Dr.', 'Dr.'),('Prof.','Prof.'),('Prof. Dr.','Prof. Dr.')])
+    anrede=fields.Selection(String="Anrede",selection=[('Herr', 'Herr'),('Frau','Frau')])
+    titel=fields.Selection(String="Titel", selection=[('Dr.', 'Dr.'),('Prof.','Prof.'),('Prof. Dr.','Prof. Dr.')])
     name=fields.Char('Nachname, Vorname')
     vornamenachname=fields.Char('Vorname, Nachname')
     telefon1=fields.Char("Telefon1")
@@ -24,47 +29,23 @@ class backend_kontakte(models.Model):
     hausnummer=fields.Char("Hausnummer")
     plz=fields.Char("PLZ")
     ort=fields.Char("Ort")
-    bundesland=fields.Char("Bundesland")    #selection=[('bw', 'Baden-Württemberg'),
-                                            #('bay','Bayern'),
-                                            #('bln','Berlin'),
-                                            #('Bbg', 'Brandenburg'),
-                                            #('bre', 'Bremen'),
-                                            #('ham', 'Hamburg'),
-                                            #('hes', 'Hessen'),
-                                            #('mvp', 'Mecklrnburg-Vorpommern'),
-                                            #('nie', 'Niedersachsen'),
-                                            #('nrw', 'Nordrhein-Westfalen'),
-                                            #('rpf', 'Rheinland-Pfalz'),
-                                            #('sar', 'Saarland'),
-                                            #('sax', 'Sachsen'),
-                                            #('saa', 'Sachsen-Anhalt'),
-                                            #('sle', 'Schleswig-Holstein'),
-                                            #('thü', 'Thüringen')])
+    bundesland=fields.Selection(String="Bundesland", selection=[('bw', 'Baden-Württemberg'),
+                                            ('Bayern','Bayern'),
+                                            ('Berlin','Berlin'),
+                                            ('Brandenburg', 'Brandenburg'),
+                                            ('Bremen', 'Bremen'),
+                                            ('Hamburg', 'Hamburg'),
+                                            ('Hessen', 'Hessen'),
+                                            ('Mecklrnburg-Vorpommern', 'Mecklenburg-Vorpommern'),
+                                            ('Niedersachsen', 'Niedersachsen'),
+                                            ('Nordrhein-Westfalen', 'Nordrhein-Westfalen'),
+                                            ('Rheinland-Pfalz', 'Rheinland-Pfalz'),
+                                            ('Saarland', 'Saarland'),
+                                            ('Sachsen', 'Sachsen'),
+                                            ('Sachsen-Anhalt', 'Sachsen-Anhalt'),
+                                            ('Schleswig-Holstein', 'Schleswig-Holstein'),
+                                            ('Thüringen', 'Thüringen')])
     land=fields.Char("Land")
     addresse=fields.Char('Adresse')
     datenok=fields.Boolean("DatenOK", default=False)
      
-
-   # @api.onchange('plz')
-   # def _auto_adresse(self):
-   #     self.addresse = str(self.strasse) + " " + str(self.hausnummer) + ", " + self.plz + " " + self.ort
-   # 
-    @api.depends('vorname', 'nachname')
-    def _auto_namevorname(self):
-        for record in self:
-            record.name = str(record.nachname) + ", " + str(record.vorname)
-   # @api.depends('vorname', 'nachname')
-    def _auto_vornamename(self):
-        for record in self:
-            record.name = str(record.vorname) + ", " + str(record.nachname)
-    @api.onchange('vorname', 'nachname','anrede','titel')
-    def _auto_vornamename(self):
-        self.vornamenachname = str(self.vorname) + ", " + str(self.nachname)
-        self.name = str (self.anrede)+ " " +str(self.titel)+" "+str(self.nachname) + ", " + str(self.vorname)
-        # Can optionally return a warning and domains
-        #return {
-        #    'warning': {
-        #        'title': "Something bad happened",
-        #        'message': "It was very bad indeed",
-        #            }
-        #        }
