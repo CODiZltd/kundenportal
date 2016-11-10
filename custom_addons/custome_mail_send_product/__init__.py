@@ -1,0 +1,2 @@
+import custom_mail_send
+#import res_partner_mail
