@@ -5,15 +5,14 @@ import apiais
 
 class backend_kontakte(models.Model):
     _name='backend.kontakte'
-    _inherit='backend.apiais.autoname'
-    _inherit='backend.apiais.accessid'
+    _inherit='backend.apiais.autoname','backend.apiais.accessid'
     
     accessid=fields.Char('ID', compute='_lookup_accessid')
     
     vorname=fields.Char("Vorname")
     nachname=fields.Char("Nachname")
-    anrede=fields.Selection(String="Anrede",selection=[('Herr', 'Herr'),('Frau','Frau')])
-    titel=fields.Selection(String="Titel", selection=[('Dr.', 'Dr.'),('Prof.','Prof.'),('Prof. Dr.','Prof. Dr.')])
+    anrede=fields.Selection(String="Anrede",selection=[(u"\u0020", 'kein'),('Herr', 'Herr'),('Frau','Frau')],default=u"\u0020")
+    titel=fields.Selection(String="Titel", selection=[(u"\u0020", 'kein'),('Dr.', 'Dr.'),('Prof.','Prof.'),('Prof. Dr.','Prof. Dr.')],default=u"\u0020")
     name=fields.Char('Nachname, Vorname')
     vornamenachname=fields.Char('Vorname, Nachname')
     telefon1=fields.Char("Telefon1")

@@ -3,10 +3,10 @@
 from openerp import models, fields, api,_
 import apiais
 
+
 class backend_berater(models.Model):
     _name='backend.berater'
-    _inherit='backend.apiais.autoname'
-    _inherit='backend.apiais.accessid'
+    _inherit='backend.apiais.autoname','backend.apiais.accessid'
     
     accessid=fields.Char('ID', compute='_lookup_accessid')
     
@@ -37,4 +37,8 @@ class backend_berater(models.Model):
     fax=fields.Char('Fax')
     datenok=fields.Boolean('Daten OK',default=False)
     
+    
+
+    
+
     

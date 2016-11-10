@@ -2,14 +2,7 @@
 
 from openerp import models, fields, api,_
 
-class backend_apiais_autoname(models.Model):
-    _name='backend.apiais.autoname'
-    
-    @api.onchange('vorname', 'nachname','anrede','titel')
-    def _auto_vornamename(self):
-        self.vornamenachname =str (self.anrede)+" "+str(self.titel)+" "+ str(self.vorname) + " , " + str(self.nachname)
-        self.name = str(self.nachname) + " , " + str(self.vorname)
-        
+       
 class backend_apiais_accessid(models.Model):
     _name='backend.apiais.accessid'
     
@@ -17,6 +10,14 @@ class backend_apiais_accessid(models.Model):
     def _lookup_accessid(self):
         for record in self:
             record.accessid = str(record.id)
+
+class backend_apiais_autoname(models.Model):
+    _name='backend.apiais.autoname'
+
+    @api.onchange('vorname', 'nachname','anrede','titel')
+    def _auto_vornamename(self):
+        self.vornamenachname =str (self.anrede)+" "+str(self.titel)+" "+ str(self.vorname) + " , " + str(self.nachname)
+        self.name =str(self.nachname) + " , " + str(self.vorname)
     
             
    #@api.onchange('plz')

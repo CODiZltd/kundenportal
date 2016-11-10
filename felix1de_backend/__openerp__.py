@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "felix1.de Backend",
+    'name': "felix1.de Backend 2",
 
     'summary': """
         Migration der Access Datenbank""",
