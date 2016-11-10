@@ -23,9 +23,19 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        #'#views/views.xml',
-        #'#views/templates.xml',
+     #'security/ir.model.access.csv',
+     #'views/contact.xml',
+     #'views/customer_form_view.xml',
+     #'views/customer_ticketing_view.xml',
+     #'views/branch_view.xml',
+     #'views/contract_view.xml',
+     #'views/bank_details_view.xml',
+     #'security/ticket_security.xml',
+     #'views/ticket_employee_view.xml',
+     #'views/order_view.xml',
+     #'views/number_view.xml',
+     #'views/start_ticket.xml',
+     #'views/customer_mail_send_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
