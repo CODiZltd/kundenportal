@@ -23,4 +23,4 @@ import branchen
 import mandantenstatus
 import jahresplan
 import backend
-
+import partner

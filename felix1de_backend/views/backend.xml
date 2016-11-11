@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="Mandant_tree_view">
+            <field name="name">mandant.tree</field>
+            <field name="model">backend.mandanten</field>
+            <field name="arch" type="xml">
+                <tree string="Mandant Tree">
+                    <field name="accessid"/>
+                    <field name="name"/>
+                    <!--field name="beraterid"/-->
+                </tree>
+            </field>
+    </record>
+        
+        <record model="ir.ui.view" id="felix1de_backend_tree_view">
+            <field name="model">res.partner</field>
+            <field name="name">backend.tree.view</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="priority" eval="16"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Mandant">
+                        <field name="mandant_id"/>
+                        <!--field name="auftragpaket"/-->
+                    </page>
+                </notebook>
+            </field>
+        </record>
+        
+<!--MENUS & ACTION-->        
+        <record model="ir.actions.act_window" id="backend_list_action">
+            <field name="name">action_felix1de_backend</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Zum Anzeigen der Feldinhalte
+                </p>
+            </field>
+        </record>
+        
+        <menuitem id="main_backend_menu" name="Access Backend"/>
+        
+        <menuitem id="backend_menu" name="Tabellen" parent="main_backend_menu"/>  
+        <menuitem id="backend" name="BACKEND" parent="main_backend_menu"/>
+            <menuitem id="backend_submenu" name="Backend view" parent="backend" action="backend_list_action"/>
+    </data>
+</openerp>
