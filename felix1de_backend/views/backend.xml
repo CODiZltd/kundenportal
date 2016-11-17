@@ -21,7 +21,7 @@
             <field name="arch" type="xml">
                 <notebook position="inside">
                     <page string="Mandant">
-                        <field name="mandant_id"/>
+                        <!--field name="mandant_id"/-->
                         <!--field name="auftragpaket"/-->
                     </page>
                 </notebook>
