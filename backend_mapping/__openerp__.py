@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "backend_mapping",
+    'name': "backend Mapping",
     'summary': """
-         Anbindung der Access Datenbank an Odoo""",
+         Anbindung der Access Datenbank an den Odoo-Framework""",
 
     'description': """
         Die Access Tabellen werden an das Odoo-Framework angebunden. 
@@ -15,7 +15,7 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
     # for the full list
-    'category': 'felix1de',
+    'category': 'felix1.de',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
