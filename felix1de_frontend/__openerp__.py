@@ -24,13 +24,32 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','mail','hr'],
 
     # always loaded
     'data': [
-        'security/ir.model.access.csv',
+        # general view definitions
         'views/views.xml',
         'views/templates.xml',
+        # secutŕity
+        'security/ir.model.access.csv',
+        ##'security/ticket_security.xml',
+        # Model related views
+        ##'views/contact.xml',
+        ##'views/customer_form_view.xml',
+        ##'views/customer_ticketing_view.xml',
+        ##'views/branch_view.xml',
+        ##'views/contract_view.xml',
+        ##'views/bank_details_view.xml',
+        ##'views/ticket_employee_view.xml',
+        ##'views/order_view.xml',
+        ##'views/number_view.xml',
+        ##'views/start_ticket.xml',
+        ##'views/customer_mail_send_view.xml',
+        ##'views/product_view.xml',
+        ##'views/mandanten.xml',
+        ##'views/kontakte_view.xml',
+        ##'views/kanzleien.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
