@@ -1,19 +1,22 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "felix1.de Backend",
+    'name': "felix1.de Kundenportal",
 
     'summary': """
-        Migration der Access Datenbank""",
+        felix1.de Webanwendung und Datenbank Frontend""",
 
     'description': """
-        Dieses Modul migriert die Tabellen der Access Datenbank.
-        Auch Aenderungen oder Anpassungen an den Tabellen in Access koennen 
-        hiermit fortlaufend aktuallisiert werden.
+        Dieses Modul ersetzt die bisherige MS Access Anwendung.
+        Das Kundenportal wurde um die folgende Funktionen erweitert:
+        
+        - Ticketmanagement (Ticketverwaltung für Manager)
+        - Unternehmenskomunikation (intern/extern)
+        - Mitarbeiterverwaltung
    """,
 
     'author': "HiYa Coding LTD",
     'website': "http://www.hiyacoding.co.uk",
-    'icon': "/felix1de_backend/static/description/backend.png",
+    'icon': "/felix1de_frontend/static/description/portal.png",
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
     # for the full list
