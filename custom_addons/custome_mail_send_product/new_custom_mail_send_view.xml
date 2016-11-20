@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+         <record id="email_template_auto_customer_partner122" model="mail.template">
+            <field name="name">Sende Ticket</field>
+            <field name="email_from">${object.company_id and object.company_id.email or ''}</field>
+            <field name="subject">Neues Ticket: ${object.name}</field>
+            <field name="email_to">${object.conMail}</field>
+            <field name="model_id" ref="customer_ticketing_system.model_felix1_ticket"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">${object.lang}</field>
+            <field name="body_html"><![CDATA[
+              Sehr geehrte ${object.name}
+		<br>
+       		<p>Vielen Dank für Ihre Anfrage. Wir werde uns umgehend bei Ihnen Melden.</p>
+              
+              
+              <p><strong><b>Kundenservice/b></strong>:      ${object.conMail}</p>
+              
+              
+            ]]></field>
+        </record>
+    </data>
+</odoo>
+
