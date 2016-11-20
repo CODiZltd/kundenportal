@@ -15,12 +15,12 @@ class res_partner(models.Model):
    branch_rel=fields.Many2one('branch.branch')
    partner_rel_id=fields.Many2many('res.partner' ,'res_id', 'res_idss')
    order_id=fields.One2many('client.order', 'name')
-  # number_id=fields.One2many('client.number', 'name')
+   number_id=fields.One2many('client.number', 'name')
    con_acquired_by=fields.Char('Acquired By')
    contact_since=fields.Char('Contact Since')
    lagel_structure=fields.Char('Legal Structure')
    client_id=fields.Char('Client ID')
-  # contact_id=fields.Many2one('contact.contacts', string='Contact ID')
+   contact_id=fields.Many2one('contact.contacts', string='Contact ID')
    client_remark=fields.Text('Remark')
    client_status=fields.Char('Status')
    house_no=fields.Char()
@@ -28,8 +28,8 @@ class res_partner(models.Model):
    etl_user_identification=fields.Char()
    house_contact_person=fields.Char('House Contact Person Chamber')
    client_issue_date=fields.Date('Issue Date')
-  # client_detail_id=fields.One2many('res.client', 'partner_id')
-  # branch_id=fields.One2many('branch.branch','contract_person')
+   client_detail_id=fields.One2many('res.client', 'partner_id')
+   branch_id=fields.One2many('branch.branch','contract_person')
    type_ext= fields.Selection(
             [
              ('invoice', 'Invoice address'),
@@ -76,8 +76,8 @@ class client_number(models.Model):
    _name="client.number"
    name=fields.Many2one('backend.mandanten')
    client_id=fields.Many2one('res.partner', 'Client')
-  # branch_id=fields.Many2one('branch.brach', 'Branch')
-  # bank_id=fields.Many2one('bank.detail', 'Accountant')
+   branch_id=fields.Many2one('branch.brach', 'Branch')
+   bank_id=fields.Many2one('bank.detail', 'Accountant')
    lohn_agent_no=fields.Char('Lohn AgentNumber')
 
 class client_detail(models.Model):
@@ -85,7 +85,7 @@ class client_detail(models.Model):
 	name=fields.Many2one('res.partner', string="Name")
 	partner_id=fields.Many2one('res.partner')
 	client_number=fields.Char(related="name.client_number" , string='Client Number')
-#	account_id=fields.Many2one('bank.detail', string='Accountant')
-#	branch_id=fields.Many2one('branch.branch', string='Branchs')
+	account_id=fields.Many2one('bank.detail', string='Accountant')
+	branch_id=fields.Many2one('branch.branch', string='Branchs')
 	issue_date=fields.Date('Issued On')
 	
