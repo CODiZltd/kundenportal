@@ -38,12 +38,47 @@ class Felix1Ticket(models.Model):
 	ToDoDone=fields.Boolean('Erledigt')
 	responsible=fields.Char('Verantwortlich')
 	partner_id=fields.Many2one('res.partner')
-        ticket_id_date=fields.Date('Ticket Erstellt Am') 
+	#getodoo -------
+	mandanten_id=fields.Many2one('backend.mandanten', string="Mandanten")
+	backend_kontakte_id=fields.Many2one('backend.kontakte', string="kontakte")
+	## -------------
+	ticket_id_date=fields.Date('Ticket Erstellt Am') 
 	ticket_id=fields.Char('Ticket_ID')
-        contact_id=fields.Many2one('contact.contacts')
-	#message_ids=fields.Many2one('mail.message')
-	#message_follower_ids=fields.One2many('mail.followers','ticket_id')
-        #### create ticket id 
+	contact_id=fields.Many2one('contact.contacts')
+	## getodoo ------------- 
+	project_issue_id=fields.Many2one('project.issue') 
+        @api.model 
+        def _create_sequence(self, vals): 
+        	""" Create new project issue""" 
+        	seq = {
+				'name': vals['name'], 
+                'partner_id':vals['priPriority'], 
+                'email_from':vals['conMail'], 
+    #'prm_ticket_id':vals['prm_ticket_id'], 
+                'mitarbeiter_id':vals['mitarbeiter_id'], 
+                'backend_kontakte_id':vals['backend_kontakte_id'] or False, 
+                'ChamBranch_rel':vals['ChamBranch_rel'], 
+                'ToDoPhone':vals['ToDoPhone'], 
+                'rem_Content':vals['rem_Content'], 
+                'frkKathegory_id':vals['frkKathegory_id'], 
+                'tikDueDate':vals['tikDueDate'], 
+                'mandanten_id':vals['mandanten_id'], 
+                'frkRemark':vals['frkRemark'], 
+                'tikStartDate':vals['tikStartDate'], 
+                'tikCloseDate':vals['tikCloseDate'], 
+                'ticket_id':vals['ticket_id'], 
+                 
+    }
+        	return self.env['project.issue'].create(seq)
+        
+        @api.model 
+        def create(self, vals): 
+        	# We just need to create the relevant id
+        	if not vals.get('project_issue_id'): 
+        		vals.update({'project_issue_id': self.sudo()._create_sequence(vals).id}) 
+        		return super(Felix1Ticket, self).create(vals) 
+ #- ----------------------------------------------------------
+	#### create ticket id 
         @api.multi
 	def creat_ticket_id(self):
 		for record in self:

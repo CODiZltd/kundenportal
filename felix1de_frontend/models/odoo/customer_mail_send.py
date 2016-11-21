@@ -52,4 +52,5 @@ class MailComposeMessage(models.TransientModel):
     def send_mail(self, auto_commit=False):
         if self._context.get('default_model') == 'felix1.ticket' and self._context.get('default_res_id') and self._context.get('mark_so_as_sent'):
             order = self.env['felix1.ticket'].browse([self._context['default_res_id']])
+            print"orderorder$$$$$$$$$$$$$$",order
         return super(MailComposeMessage, self.with_context(mail_post_autofollow=True)).send_mail(auto_commit=auto_commit)

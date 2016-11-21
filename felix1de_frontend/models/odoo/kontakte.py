@@ -1,7 +1,8 @@
 from openerp import models, fields, api,_
 
 class backend_kontakte(models.Model):
-    _inherit='backend.kontakte'
+    _name='backend.kontakte' 
+    _inherit=['backend.kontakte','mail.thread'] 
     
     client_id=fields.One2many('backend.mandanten', 'contact_id')
     ticket_id=fields.One2many('felix1.ticket', 'contact_id')
