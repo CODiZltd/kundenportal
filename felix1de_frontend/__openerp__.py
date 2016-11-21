@@ -24,7 +24,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','mail','hr'],
+    'depends': ['base','mail','hr','felix1de_backend','project_issue'],
 
     # always loaded
     'data': [
@@ -50,6 +50,7 @@
         ##'views/mandanten.xml',
         ##'views/kontakte_view.xml',
         ##'views/kanzleien.xml',
+        ##'views/project_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
@@ -57,5 +58,5 @@
     ],
     'application': True,
     'installable': True,
-    'auto_install': False
+    'auto_install': True
 }
