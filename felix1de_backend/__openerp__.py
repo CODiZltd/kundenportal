@@ -28,6 +28,9 @@
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/abrechnungszeitraeume.xml',
+        'views/auftraege.xml',
+        'views/mandanten.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
