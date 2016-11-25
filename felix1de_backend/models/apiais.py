@@ -11,7 +11,6 @@ class backend_apiais_accessid(models.Model):
         for record in self:
             record.accessid = str(record.id)
 
-
 class backend_apiais_autoname(models.Model):
     _name='backend.apiais.autoname'
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "felix1.de Backend",
+    'name': "felix1.de Backend 2",
 
     'summary': """
         Migration der Access Datenbank""",
@@ -17,7 +17,7 @@
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
     # for the full list
-    'category': 'felix1.de',
+    'category': 'felix1',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
@@ -28,9 +28,6 @@
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'views/abrechnungszeitraeume.xml',
-        'views/auftraege.xml',
-        'views/mandanten.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
@@ -38,5 +35,5 @@
     ],
     'application': True,
     'installable': True,
-    'auto_install': True
+    'auto_install': False
 }
