@@ -655,7 +655,7 @@
 
 
         <!-- top level menu: no parent -->
-        <menuitem id="main_backend_menu" name="Access Backend"/>
+        <menuitem id="main_backend_menu" name="Access Backend" groups="group_backend_menu"/>
         <!-- A first level in the left side menu is needed
              before using action= attribute -->
         <menuitem id="backend_menu" name="Tabellen"
