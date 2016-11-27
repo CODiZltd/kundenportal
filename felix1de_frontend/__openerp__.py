@@ -33,7 +33,7 @@
         'views/templates.xml',
         # secutŕity
         'security/ir.model.access.csv',
-        ##'security/ticket_security.xml',
+        'security/security.xml',
         # Model related views
         ##'views/contact.xml',
         ##'views/customer_form_view.xml',
