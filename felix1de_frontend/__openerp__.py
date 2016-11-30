@@ -35,7 +35,7 @@
         'security/ir.model.access.csv',
         'security/security.xml',
         # Model related views
-        'views/backend.xml'
+        'views/backend.xml',
         ##'views/contact.xml',
         ##'views/customer_form_view.xml',
         ##'views/customer_ticketing_view.xml',
