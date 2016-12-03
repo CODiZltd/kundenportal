@@ -36,7 +36,7 @@
         'security/security.xml',
         # Model related views
         'views/backend.xml',
-        'views/kontakte/kontakte.xml',
+        'views/res_partner/mandanten.xml',
         ##'views/customer_form_view.xml',
         ##'views/customer_ticketing_view.xml',
         ##'views/branch_view.xml',

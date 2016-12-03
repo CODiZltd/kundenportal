@@ -2,6 +2,7 @@
 from openerp import fields,models,api,_
 
 class res_partner(models.Model):
+   _inherit=['backend.mandanten','backend.kontakte']
    _inherit='res.partner'
    
    lastname=fields.Char()
